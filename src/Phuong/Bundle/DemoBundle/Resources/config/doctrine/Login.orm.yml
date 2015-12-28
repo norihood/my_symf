@@ -1,0 +1,32 @@
+Phuong\Bundle\DemoBundle\Entity\Login:
+    type: entity
+    table: null
+    repositoryClass: Phuong\Bundle\DemoBundle\Entity\LoginRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        username:
+            type: string
+            length: 255
+        password:
+            type: string
+            length: 255
+        firstname:
+            type: string
+            length: 255
+        lastname:
+            type: string
+            length: 255
+        displayname:
+            type: string
+            length: 255
+        birthday:
+            type: date
+        createdAt:
+            type: datetime
+            column: created_at
+    lifecycleCallbacks: {  }

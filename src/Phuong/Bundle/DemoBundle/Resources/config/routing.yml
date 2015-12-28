@@ -1,0 +1,3 @@
+phuong_demo_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: PhuongDemoBundle:Default:index }
