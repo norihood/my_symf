@@ -2,6 +2,8 @@
 
 namespace Phuong\Bundle\DemoBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * Login
  */
@@ -21,9 +23,14 @@ class Login
 
     /**
      * @var string
-     * @Assert\NotBlank()
      */
     private $password;
+
+    /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max = 4096)
+     */
+    private $plainPassword;
 
     /**
      * @var string
@@ -54,6 +61,12 @@ class Login
      */
     private $createdAt;
 
+    /**
+     * @var string $gender
+     *
+     *
+     */
+    private $gender;
 
     /**
      * Get id
@@ -111,6 +124,16 @@ class Login
     public function getPassword()
     {
         return $this->password;
+    }
+
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
     }
 
     /**
@@ -231,6 +254,26 @@ class Login
     public function getCreatedAt()
     {
         return $this->createdAt;
+    }
+
+    /**
+     * Set gender
+     *
+     * @param string $gender
+     */
+    public function setGender($gender)
+    {
+        $this->gender = $gender;
+    }
+
+    /**
+     * Get gender
+     *
+     * @return string 
+     */
+    public function getGender()
+    {
+        return $this->gender;
     }
 }
 

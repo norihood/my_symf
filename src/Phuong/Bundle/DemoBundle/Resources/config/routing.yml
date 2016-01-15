@@ -1,3 +1,14 @@
 phuong_demo_homepage:
     path:     /hello/{name}
     defaults: { _controller: PhuongDemoBundle:Default:index }
+
+your_annotation_route:
+    resource: "@PhuongDemoBundle/Controller/LoginController.php"
+    type: annotation
+show_login:
+    path:     /showLogin
+    defaults: { _controller: PhuongDemoBundle:Login:showLogin }
+
+register:
+    path:     /register
+    defaults: { _controller: PhuongDemoBundle:Login:register }

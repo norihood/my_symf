@@ -24,8 +24,14 @@ Phuong\Bundle\DemoBundle\Entity\Login:
         displayname:
             type: string
             length: 255
+            nullable: TRUE
+        gender:
+            type: string
+            length: 10
+            nullable: TRUE
         birthday:
             type: date
+            nullable: TRUE
         createdAt:
             type: datetime
             column: created_at
